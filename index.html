@@ -136,7 +136,7 @@ const controls = new THREE.OrbitControls(camera, renderer.domElement);
         if (mixer2) mixer2.update(0.01);
                
         // カメラコントロールの更新
-        controls.update();
+        //controls.update();
 
         // 照明の位置をカメラに合わせる
         //directionalLight.position.copy(camera.position);
@@ -144,7 +144,7 @@ const controls = new THREE.OrbitControls(camera, renderer.domElement);
         
         renderer.render(scene, camera);
       }
-controls.update();
+//controls.update();
 
     
     </script>
