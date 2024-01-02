@@ -105,10 +105,10 @@
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
-        const controls = new THREE.OrbitControls(camera, renderer.domElement); //追加した1行  この行を追加することは問題ではない．
+        //const controls = new THREE.OrbitControls(camera, renderer.domElement); //追加した1行  この行を追加することは問題ではない．
       }
-//*/      
-//const controls = new THREE.OrbitControls(camera, renderer.domElement);
+   
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 //★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ 6. 背景テクスチャの設定
 //★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
