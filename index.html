@@ -92,12 +92,34 @@
         window.addEventListener('resize', onWindowResize, false);
       }
 
+      
+//★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ 5. カメラの設定
+//★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
       function onWindowResize() {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
       }
 
+//★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ 6. 背景テクスチャの設定
+//★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+       // テクスチャの読み込みと背景への設定
+        const textureLoader = new THREE.TextureLoader();
+        textureLoader.load(
+            'gradation.jpg',  // 背景画像のパス
+            //'thin.jpg',  // 背景画像のパス
+            function (texture) {
+                scene.background = texture;
+            },
+            undefined,
+             function (error) {
+                 console.error(error);
+             }
+        );
+
+      
+//★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ 7. アニメーションの設定
+//★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
       function animate() {
         requestAnimationFrame(animate);
 
