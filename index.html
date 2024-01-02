@@ -105,7 +105,7 @@
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
-        const controls = new THREE.OrbitControls(camera, renderer.domElement); //追加した1行 
+        const controls = new THREE.OrbitControls(camera, renderer.domElement); //追加した1行  この行を追加することは問題ではない．
       }
 //*/      
 //const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -115,8 +115,8 @@
        // テクスチャの読み込みと背景への設定
         const textureLoader = new THREE.TextureLoader();
         textureLoader.load(
-            //'gradation.jpg',  // 背景画像のパス
-            'thin.jpg',  // 背景画像のパス
+            'gradation.jpg',  // 背景画像のパス
+            //'thin.jpg',  // 背景画像のパス
             function (texture) {
                 scene.background = texture;
             },
@@ -136,7 +136,7 @@
         if (mixer2) mixer2.update(0.01);
                
         // カメラコントロールの更新
-        //controls.update();
+        controls.update();
 
         // 照明の位置をカメラに合わせる
         //directionalLight.position.copy(camera.position);
