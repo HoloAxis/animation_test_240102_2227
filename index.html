@@ -67,8 +67,7 @@
         const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.001, 100);//near, far
         camera.position.z = 4;
         camera.position.y = 1;
-        camera.near = 0.1;
-        camera.far = 1000000;
+
 
         
         renderer = new THREE.WebGLRenderer();
@@ -105,13 +104,13 @@
       
 //★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ 5. カメラの設定
 //★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-/*      function onWindowResize() {
+///*      function onWindowResize() {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
       }
-*/      
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
+//*/      
+//const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 //★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ 6. 背景テクスチャの設定
 //★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
